@@ -8,36 +8,37 @@ import CardListItem from "../atoms/ItemListCard";
 
 const item1 = [
   "Full Stack Developer",
-  "Explore More",
   "MERN Stack Developer",
   "Front End Developer",
   "Shopify Developer",
   "Data Scientist",
   "Python Developer",
   "Full Stack Developer",
-  "Explore More",
+  "Flask Developer",
   "MERN Stack Developer",
   "Front End Developer",
   "Shopify Developer",
   "Data Scientist",
   "Python Developer",
+  "Explore More",
 ];
 const item2 = [
-  "Full Stack Developer",
+  "Graphic Designer",
+  "UI/UX Designer",
+  "Web Designer",
+  "Illustrator",
+  "Motion Designer",
+  "Game Designer",
+  "Interior Designer",
+  "Fashion Designer",
+  "Product Designer",
+  "Visual Designer",
+  "Graphic Designer",
+  "UI/UX Designer",
+  "Web Designer",
   "Explore More",
-  "MERN Stack Developer",
-  "Front End Developer",
-  "Shopify Developer",
-  "Data Scientist",
-  "Python Developer",
-  "Full Stack Developer",
-  "Explore More",
-  "MERN Stack Developer",
-  "Front End Developer",
-  "Shopify Developer",
-  "Data Scientist",
-  "Python Developer",
 ];
+
 
 
 const FindWork = () => {
@@ -94,12 +95,12 @@ const FindWork = () => {
             {
               label: `IT & Development`,
               key: 1,
-              children: <CardListItem items={item2} />,
+              children: <CardListItem items={item1} />,
             },
             {
               label: `Design and Creative`,
               key: 2,
-              children: <CardListItem items={item1.sort()} />,
+              children: <CardListItem items={item2} />,
             },
           ]}
         />
