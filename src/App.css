@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,125 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.app-style .ant-tabs-tab .ant-tabs-tab-btn {
+  color: black !important;
+}
+
+.app-style .ant-tabs-tab .ant-tabs-tab-btn {
+  border-radius: 4px !important;
+}
+
+.app-style .ant-tabs-tab-active {
+  background-color: #c7f4c2 !important;
+}
+
+.image-stack {
+  position: relative;
+  width: 20px;
+  height: 50px;
+}
+.image-stack img {
+  position: absolute;
+  /* top: 50%; */
+  /* left: calc(50% - 20px); */
+  transition: transform 0.3s ease-in-out;
+}
+/* .image-stack:hover img:nth-child(1) {
+  transform: translate(calc(-50% + 20px));
+}
+.image-stack:hover img:nth-child(3) {
+  transform: translate(50%);
+} */
+
+.extra {
+  height: calc(100% + 100px);
+}
+
+.parallelogram {
+  /* width: 200px; Adjust width as needed */
+  /* height: 100px; Adjust height as needed */
+  /* background-color: #3498db; Background color */
+  transform: skewY(-3deg); /* Skew the div */
+  /* margin: 20px; Add margin as needed */
+}
+.parallelogram-content {
+  /* width: 200px; Adjust width as needed */
+  /* height: 100px; Adjust height as needed */
+  transform: skewY(3deg); /* Skew the div */
+}
+
+.gradient-text {
+  position: relative;
+}
+.gradient-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 5rem /* 80px */;
+  padding-bottom: 5rem;
+  padding-left: 5rem;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.ant-carousel .slick-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.ant-carousel .slick-dots {
+  bottom: -40px;
+  background-color: #e1e3f8;
+  width: 50%;
+  left: 25%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ant-carousel .slick-dots li.slick-active{
+  width: 50px;
+  height: 5px;
+}
+
+.ant-carousel .slick-dots li{
+  width: 50px;
+  height: 5px;
+  
+}
+
+.ant-carousel .slick-dots li.slick-active button{
+  background-color: #202229;
+  height: 100%;
+
+}
+
+
+.ant-carousel .slick-dots li button{
+  background-color: white;
+  height: 100%;
+  opacity: 1;
+
+}
+.dash::after{
+  content: " ";
+  width: 15px;
+  height: 5px;
+}
+
+
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

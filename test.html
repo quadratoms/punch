@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Stack Hover Effect</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Additional custom styles can be added here */
+    .image-stack {
+      position: relative;
+      width: 300px;
+      height: 200px;
+    }
+    .image-stack img {
+      position: absolute;
+      top: 50%;
+      left: calc(50% - 20px);
+      transition: transform 0.3s ease-in-out;
+    }
+    .image-stack:hover img:nth-child(1) {
+      transform: translate(calc(-50% + 20px));
+    }
+    .image-stack:hover img:nth-child(3) {
+      transform: translate(50%);
+    }
+  </style>
+</head>
+<body class="bg-gray-200 py-8 px-4">
+  <div class="image-stack overflow-hidden bg-gray-300 rounded-md shadow-md">
+    <img src="image1.jpg" alt="Image 1" class="w-full h-full object-cover">
+    <img src="image2.jpg" alt="Image 2" class="w-full h-full object-cover">
+    <img src="image3.jpg" alt="Image 3" class="w-full h-full object-cover">
+  </div>
+</body>
+</html>

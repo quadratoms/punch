@@ -1,3 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'ABeeZee';
+  font-style: normal;
+  src: local('ABeeZee'), url(/src/fonts/ABeeZee-Regular.ttf) format('woff');
+}
+@font-face {
+  font-family: 'ABeeZee';
+  font-style: italic;
+  src: local('ABeeZee'), url(/src/fonts/ABeeZee-Italic.ttf) format('woff');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
