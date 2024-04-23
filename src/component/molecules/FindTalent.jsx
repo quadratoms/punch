@@ -21,8 +21,12 @@ import { RoundedBadge } from "../atoms/RoundedBadge";
 
 export default function FindTalent() {
   return (
-    <div className="w-full h-max flex flex-col justify-center items-center   p-10 relative">
-      <img src={slantBg} className="absolute -top-20 z-10 w-full extra" alt="" />
+    <div className="w-full h-max flex flex-col justify-center items-center p-10 relative">
+      <img
+        src={slantBg}
+        className="absolute -top-20 z-10 w-full extra"
+        alt=""
+      />
       <div className="md:w-max px-14 py-20 text-3xl md:text-5xl z-20 text-center font-semibold">
         Your one-stop marketplace for finding <br /> the talent your business
         needs.
@@ -50,36 +54,52 @@ export default function FindTalent() {
               </div>
             </div>
           </div>
-          <AppBadge text="Explore More" icon={whiteIcon} />
+          <AppBadge className="bg-black" text="Explore More" icon={whiteIcon} />
         </div>
         <div className="flex-[3] ">
-          <div className="bg-white p-5 my-8 rounded-3xl">
-            <div>IT & Development</div>
-            <div className="flex justify-between overflow-x-scroll scroll-hide gap-4 text-center">
-              <RoundedBadge icon={shopify}  text={"Shopify Developer"}/>
-              <RoundedBadge icon={magento}  text={"Magento Developer"}/>
-              <RoundedBadge icon={dataSciLogo}  text={"Data Scientist"}/>
-              <RoundedBadge icon={webflowLogo}  text={"Webflow Developer"}/>
-              <RoundedBadge icon={donnetLogo}  text={"Dot net Developer"}/>
-              <RoundedBadge icon={blackIcon}  text={<><br/><br/></>}/>
-              
-            </div>
-          </div>
-          <div className="bg-white p-5 my-8 rounded-3xl">
-            <div>IT & Development</div>
-            <div className="flex justify-between overflow-x-scroll scroll-hide gap-4 text-center">
-              <RoundedBadge icon={backIcon}  text={<><br/><br/></>}/>
-              <RoundedBadge icon={figma}  text={"Shopify Designer"}/>
-              <RoundedBadge icon={ps}  text={"Shopify Designer"}/>
-              <RoundedBadge icon={adobe}  text={"Shopify Designer"}/>
-              <RoundedBadge icon={unreal}  text={"Shopify Designer"}/>
-              <RoundedBadge icon={cinema}  text={"Cinema 4D"}/>
-              
-            </div>
-          </div>
-          <div></div>
+          <TalentCategory title="IT & Development">
+            <RoundedBadge icon={shopify} text={"Shopify Developer"} />
+            <RoundedBadge icon={magento} text={"Magento Developer"} />
+            <RoundedBadge icon={dataSciLogo} text={"Data Scientist"} />
+            <RoundedBadge icon={webflowLogo} text={"Webflow Developer"} />
+            <RoundedBadge icon={donnetLogo} text={"Dot net Developer"} />
+            <RoundedBadge
+              icon={blackIcon}
+              text={
+                <>
+                  <br />
+                  <br />
+                </>
+              }
+            />
+          </TalentCategory>
+          <TalentCategory title="Design & Creative">
+            <RoundedBadge
+              icon={backIcon}
+              text={
+                <>
+                  <br />
+                  <br />
+                </>
+              }
+            />
+            <RoundedBadge icon={figma} text={"Shopify Designer"} />
+            <RoundedBadge icon={ps} text={"Shopify Designer"} />
+            <RoundedBadge icon={adobe} text={"Shopify Designer"} />
+            <RoundedBadge icon={unreal} text={"Shopify Designer"} />
+            <RoundedBadge icon={cinema} text={"Cinema 4D"} />
+          </TalentCategory>
         </div>
       </div>
     </div>
   );
 }
+
+const TalentCategory = ({ title, children }) => (
+  <div className="bg-white p-5 my-8 rounded-3xl">
+    <div>{title}</div>
+    <div className="flex justify-between overflow-x-scroll scroll-hide gap-4 text-center">
+      {children}
+    </div>
+  </div>
+);
